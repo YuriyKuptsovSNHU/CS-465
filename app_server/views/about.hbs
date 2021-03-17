@@ -6,7 +6,7 @@
 	<title>{{title}}</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<script>
-		let page_suffix = "travel";
+		let page_suffix = "about";
 
 		{{>navcode}}
 	</script>
@@ -14,32 +14,20 @@
 <body>
 	<div id="background">
 		<div id="page">
-			{{> header}}
+			{{>header}}
 			<div id="contents">
 				<div class="box">
 					<div>
 						<div class="body">
-							<h1>Travel</h1>
-							<ul id="sites">
-								{{#each trips}}
-									<li>
-										<a href="/travel">
-											<img src="images/{{this.image}}" alt="Img">
-										</a>
-										<h2>
-											<a href="/travel">{{this.name}}</a>
-										</h2>
-										{{{this.description}}}
-									</li>
-								{{/each}}
-							</ul>
+							{{#each about_section}}
+								{{{this}}}
+							{{/each}}
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		{{> footer }}
-	</div>	
+		{{>footer}}
+	</div>
 	{{>shownavcode}}
-</body>
 </html>

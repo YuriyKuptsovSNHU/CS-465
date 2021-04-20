@@ -81,6 +81,8 @@
         </div>
       </div>
     </div>
-    <button type="submit" class="btn btn-info">Save</button>
+    <div *ngIf="isLoggedIn()">
+      <button type="submit" class="btn btn-info">Save</button>
+  </div>
   </form>
 </div>
